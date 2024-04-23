@@ -1,24 +1,20 @@
 import "./App.scss";
 import Addtodo from "./components/Addtodo";
+import TodoItems from "./components/TodoItems";
 import Todoname from "./components/Todoname";
-import Todoname1 from "./components/Todoname1";
-import Todoname2 from "./components/Todoname2";
-
-
-
+import TodoItemsContextProvider from "./store/todoItemContext";
 
 function App() {
   return (
-    <div class="container text-center">
-      <Todoname />
-      <Addtodo />
-      <div className="items-container">
-      <Todoname1 />
-      <Todoname2 />
+    <TodoItemsContextProvider>
+      <div classNameName="container text-center">
+        <Todoname />
+        <Addtodo />
+        <div classNameName="items-container">
+          <TodoItems />
+        </div>
       </div>
-      
-      
-    </div>
+    </TodoItemsContextProvider>
   );
 }
 

@@ -1,8 +1,9 @@
 import React from 'react'
+import styles from './Todoname.module.scss'
 
 function Todoname() {
   return (
-    <div>
+    <div classNameName={styles.todoHeading}>
         <h1>Todo App</h1>
     </div>
   )
