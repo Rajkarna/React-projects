@@ -18,13 +18,30 @@ const Createpost = () => {
     const reactions = reactionsElement.current.value;
     const tags = tagsElement.current.value.split(" ");
 
-    userIdElement.current.value = "";
-    postTitleElement.current.value = "";
-    postBodyElement.current.value = "";
-    reactionsElement.current.value = "";
-    tagsElement.current.value = "";
+    // userIdElement.current.value = "";
+    // postTitleElement.current.value = "";
+    // postBodyElement.current.value = "";
+    // reactionsElement.current.value = "";
+    // tagsElement.current.value = "";
 
-    addPost(userId, postTitle, postBody, reactions, tags);
+    sendPost()
+
+    async function sendPost() {
+      const res = await fetch("https://dummyjson.com/posts/add", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          title: postTitle,
+          body: postBody,
+          reactions: reactions,
+          userId: userId,
+          tags: tags,
+        }),
+      });
+
+      const result = await res.json();
+      addPost(result);
+    }
   };
 
   return (

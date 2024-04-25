@@ -1,6 +1,9 @@
-import React from "react";
+import Reacts from "react";
+
 
 const Sidebar = ({ selected, setSelected }) => {
+ 
+
   return (
     <div
       className="d-flex flex-column flex-shrink-0 p-3 text-bg-dark sidebar"
