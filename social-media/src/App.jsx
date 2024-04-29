@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 import Createpost from "./components/Createpost";
 import Postlist from "./components/Postlist";
 import PostListContextProvider from "./store/Post-list-store";
+import { Outlet } from "react-router-dom";
 
 const App = () => {
   const [selected, setSelected] = useState("Home");
@@ -16,7 +17,7 @@ const App = () => {
         <Sidebar selected={selected} setSelected={setSelected} />
         <div className="content">
           <Header />
-          {selected === "Home" ? <Postlist /> : <Createpost />}
+          <Outlet />
 
           <Footer />
         </div>

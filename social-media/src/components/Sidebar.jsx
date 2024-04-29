@@ -1,7 +1,8 @@
 import Reacts from "react";
+import { Link } from "react-router-dom";
 
 
-const Sidebar = ({ selected, setSelected }) => {
+const Sidebar = () => {
  
 
   return (
@@ -20,30 +21,28 @@ const Sidebar = ({ selected, setSelected }) => {
       </a>
       <hr />
       <ul className="nav nav-pills flex-column mb-auto">
-        <li className="nav-item" onClick={() => setSelected("Home")}>
-          <a
-            href="#"
-            className={`nav-link text-white ${selected === "Home" && "active"} `}
+        <li className="nav-item">
+          <Link
+            to="/"
+            className= "nav-link text-white" 
             aria-current="page"
           >
             <svg className="bi pe-none me-2" width="16" height="16">
               <use xlinkHref="#home"></use>
             </svg>
             Home
-          </a>
+          </Link>
         </li>
-        <li onClick={() => setSelected("Create post")}>
-          <a
-            href="#"
-            className={`nav-link text-white  ${
-              selected === "Create post" && "active"
-            } `}
+        <li>
+          <Link
+            to="/create-post"
+            className="nav-link text-white"
           >
             <svg className="bi pe-none me-2" width="16" height="16">
               <use xlinkHref="#speedometer2"></use>
             </svg>
             Create post
-          </a>
+          </Link>
         </li>
       </ul>
       <hr />
