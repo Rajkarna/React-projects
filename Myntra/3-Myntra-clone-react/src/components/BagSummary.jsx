@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 
 const BagSummary = () => {
 
-  const bagItemsids = useSelector(state => state.bag)
+  const bagItemsids = useSelector(state => state.bag);
   const items = useSelector((state) => state.items);
   const bagItems = useSelector((state) => state.bag);
 
@@ -11,18 +11,21 @@ const BagSummary = () => {
   let totalMRP = 0
   let totalDiscount = 0
 
+
+
   const finalItems = items.filter((item) => {
     const listItems = bagItems.indexOf(item.id);
     return listItems >= 0;
   });
 
+  
   finalItems.forEach(item => {
     totalMRP += item.current_price
     totalDiscount = totalMRP % 7;
   })
 
-  let finalPayment = totalMRP - totalDiscount + CONVENIENCE_FEE;
 
+  let finalPayment = totalMRP - totalDiscount + CONVENIENCE_FEE;
 
   const totalItem = bagItemsids.length;
   

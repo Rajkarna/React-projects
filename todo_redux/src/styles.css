@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Jacquard+12&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-color: #4158d0;
+  background-image: linear-gradient(
+    43deg,
+    #4158d0 0%,
+    #c850c0 46%,
+    #ffcc70 100%
+  );
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* gap: 30px; */
+}
+
+.heading {
+  font-family: "Jacquard 12", system-ui;
+  font-size: 40px;
+  font-weight: 900;
+  font-style: normal;
+  margin: 20px;
+}
+
+.input {
+  position: relative;
+}
+
+.input__box {
+  width: 400px;
+  height: 50px;
+  border-radius: 30px;
+  outline: none;
+  border: 2px solid #808080;
+}
+
+.input__box::placeholder {
+  font-size: 1rem;
+  text-align: center;
+}
+
+.input_button {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  padding: 10px;
+  border: 1px solid #c850c0;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  border-radius: 20px;
+  background-color: #4158d0;
+}
+
+.input_button:active {
+  scale: 0.8;
+}
+
+.todo_item {
+    padding: 30px;
+  background-color: #00dbde;
+  background-image: linear-gradient(90deg, #00dbde 0%, #fc00ff 100%);
+    border-radius: 30px;
+  margin-top: 40px;
+  display: flex;
+  gap: 10px;
+}
+
+.todo_title {
+  flex: 1;
+}
+
+.edit_input{
+    position: relative;
+}
+
+.todo_box{
+  
+  width: 300px;
+  height: 50px;
+  border-radius: 30px;
+  outline: none;
+  border: 2px solid #808080;
+}
+
+
+
+
+
+.update_button{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background-color: #c850c0;
+    border-radius: 20px;
+    padding: 5px;
+}
